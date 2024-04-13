@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAn_2;
+using QUANLYGARAGE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,10 @@ namespace QLTIEMBANLAPTOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+           //
+            Application.Run(new Flogin());
+          // Application.Run(new FMainControl());
+           //Application.Run(new FThongTinKhachHang());
         }
     }
 }
