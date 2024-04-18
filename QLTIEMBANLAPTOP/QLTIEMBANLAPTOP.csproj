@@ -33,8 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -57,6 +81,18 @@
     <Compile Include="FdoanhThu.designer.cs">
       <DependentUpon>FdoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKhuyenMai.designer.cs">
+      <DependentUpon>FKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemHDNK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemHDNK.designer.cs">
+      <DependentUpon>FThemHDNK.cs</DependentUpon>
+    </Compile>
     <Compile Include="FKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +105,35 @@
     <Compile Include="Flogin.designer.cs">
       <DependentUpon>Flogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanVien.designer.cs">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSanPham.designer.cs">
+      <DependentUpon>FSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemHoaDon.designer.cs">
+      <DependentUpon>FThemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTinKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FThongTinKhachHang.designer.cs">
       <DependentUpon>FThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTimSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTimSanPham.designer.cs">
+      <DependentUpon>FTimSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemSanPham.cs">
       <SubType>UserControl</SubType>
@@ -93,14 +153,32 @@
     <EmbeddedResource Include="FdoanhThu.resx">
       <DependentUpon>FdoanhThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FKhuyenMai.resx">
+      <DependentUpon>FKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemHDNK.resx">
+      <DependentUpon>FThemHDNK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FKhachHang.resx">
       <DependentUpon>FKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Flogin.resx">
       <DependentUpon>Flogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FNhanVien.resx">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSanPham.resx">
+      <DependentUpon>FSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemHoaDon.resx">
+      <DependentUpon>FThemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FThongTinKhachHang.resx">
       <DependentUpon>FThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTimSanPham.resx">
+      <DependentUpon>FTimSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemSanPham.resx">
       <DependentUpon>ItemSanPham.cs</DependentUpon>
@@ -108,6 +186,7 @@
     <EmbeddedResource Include="FMainControl.resx">
       <DependentUpon>FMainControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,6 +265,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_4034499.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-laptop-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supplier-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AnhSanPham\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\default.jpg" />
+    <None Include="Resources\default1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

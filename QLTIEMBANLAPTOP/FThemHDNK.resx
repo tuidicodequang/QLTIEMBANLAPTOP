@@ -117,65 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="windows-11-dark-background-bloom-5k-1920x1080-8398" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\windows-11-dark-background-bloom-5k-1920x1080-8398.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonHuy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhFAAUAIf/APpKWvYOJtIZLPYPLfIWMfk2Rfny8u0mOu0GG/YZL+4ZLvEhNvkCIvsbMPwTLvdv
+        etQKJPkkNv0hNf0eM/kcMfkZL+kdM/wNKfolPfshNfgfMfYaL/gNKP3JzeofM+EYKvsnOPz6+usfMvwX
+        L/To6fHp6dp4g+seM7Y9RvYWLvwaNeAEGsOQl9+tsetSXeAbMOFXZu4DHP79/eEAE/QUJsqiptjExfoW
+        LJ8+Se4KHP7W2frS1/7e4fQLJ7yRlP0fNOs7S/onOegQIr8oN6IuO9dbZvYgN/81R/sRLbg0PcQqN/jI
+        zPQaMN0eMe0gMepWYf23vM2Tm//+/ugcMN3Mzd0eL+oOKPAIG/k0Rv7IzPkpO/38/NeaoO8WJv0gNv8g
+        NfgeMsWjp+sAEu0AEfIfMte5vdzExsKJjPggNf7FyspRWf7Y2/gOK7lASfgbMefT09QsPPUVLvUWLPks
+        Qv7f4+cXKfwWLesOH8Jvdv0XNPgVLPk5TPr5+fomOPkII7ijpPWGj/IkPNISJ/QEIdqco85mb/sgPOvg
+        4PwiNP8mOPgTK/Tv8J5BTOCnqvlRYftfbsYkM8MYK8oqOfUAEugfNewfMcA7RMULIuciNcJRWPne4Mow
+        QNajqNOqrfIWKuK/xLMpN//Bx78rOvkeNesfMPPw8OcFIPoeOuENIuCKk/cAGfbu7+nV1vuOmcJFUfhh
+        b8xBUP4pO/8tP/EXLtGboefP0OoSJPyYorZZYrtMWfwiN9rV1OLIyvofM6glNddUXfANKKQ0P+kDF+0A
+        FOUVJvYeNNO7vfyQmfkkOuQbL/QYLqkfMPthcPplc8k3QtOUm/4ZL/gjNr09Sf/HzP24v9kbLNwbLuwS
+        KPkLJvlLXP3Z3btATsyWnOg8StIrOd0HHdMsPf0BI/UVLdGDjdVBT/cVLfUvQblqcfLNz/gNKuYRKaJF
+        TfTq6ds6Sv8XLs+Qlvr19cVud/wVMMEuPv8NKfsVLfk8S+xOXfv5+vXy8vXz885TXObT1PgLIf4dNv//
+        /yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAD/ACwAAAAAFAAUAAAI/wD/CRyo4xgzAABeAUI3sOHANQ/Q
+        VKjQq0+QDG5g8HIoEIo9MA3c1ZOz4UsiEBOs0HJIrYAGaMAuLcPByJegDRF+DOI2kM4ebBcgEPFBZVG+
+        XX82TYjmz5QNgc0YhIOwjp/DJeYiZDhFDxYfHhwuqAvGymEoLzcaxCFgKEaZWxQkRDrjMA0yRXYC5Kqm
+        IkChBxHIgKrVsAMWMIgSmFjlDIkCco5AVEJBYqDhuMrGCVTD5gW4bA0UtGEnMMscDvL8RBG45dcAa3Ae
+        MRiQ5M2/aRjS5emRaqABIAQ+tGulygEkFjswJBh17V3DT7os3CmiLcYISkMCJRMh5FlDeC4cYHgaw0nK
+        vStGxE1pUoVQw3wPZJ3o4k3fP02oPC3wIADXoRAhlNDCE0ccQIoYnQzUyAwJLCCAEpZksk83sWhxgBOT
+        xOMQF9/0UwwTKZSjxywWeEDDMHjgw5EZrqyAgC11fEBMDsJIUgNHA8lgzDnbzCOKNLiEUYpDAQEAOw==
+</value>
   </data>
-  <data name="e3f7744697484505a7da4496f23c2a85" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e3f7744697484505a7da4496f23c2a85.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\car.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="people_9968491" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\people_9968491.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gigabyteg5.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gigabyteg5.png.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2024-04-11_121634228" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2024-04-11_121634228.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows-11-dark-mode-abstract-background-black-background-1920x1080-8710" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\windows-11-dark-mode-abstract-background-black-background-1920x1080-8710.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_4034499" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_4034499.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rog-flow-z16-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rog-flow-z16-01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-laptop-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-laptop-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="statistics_5454515" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics_5454515.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-supplier-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-supplier-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping-cart_4034643" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping-cart_4034643.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="revenue_77684331" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\revenue_77684331.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\default1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="CustomerId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LastName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Sex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DateOfBirth.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Phone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="password.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CustomerId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LastName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Sex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DateOfBirth.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Phone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="password.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

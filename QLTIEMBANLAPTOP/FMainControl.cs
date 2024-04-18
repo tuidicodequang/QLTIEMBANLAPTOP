@@ -16,6 +16,8 @@ using System.Windows.Media.Media3D;
 using QLTIEMBANLAPTOP;
 using QUANLYGARAGE;
 using DashboardApp;
+using DOAN;
+using TiemDien;
 
 namespace DoAn_2
 {
@@ -35,6 +37,8 @@ namespace DoAn_2
             lefborderbtn.Size = new Size(7, 50);
             PanelMenu.Controls.Add(lefborderbtn);
             labelcon.Text = "Trang Chủ";
+            FdoanhThu f = new FdoanhThu();
+            OpenchildForm(f);
             timer1.Start();//dong ho
             
         }
@@ -43,7 +47,9 @@ namespace DoAn_2
         {
             if (currentFormChild != null)
             {
+                
                 currentFormChild.Close();
+               
             }
             currentFormChild = childFrom;
             childFrom.TopLevel = false;
@@ -63,7 +69,7 @@ namespace DoAn_2
             public static Color color4 = Color.FromArgb(95,77,221);
             public static Color color5 = Color.FromArgb(249,88,155);
             public static Color color6 = Color.FromArgb(24,161,251);
-            public static Color color7 = Color.FromArgb(145,151,154);
+            public static Color color7 = Color.FromArgb(251, 192, 17);
 
         }
 
@@ -111,17 +117,16 @@ namespace DoAn_2
        
         private void btnhome_Click(object sender, EventArgs e)
         {
-            activebtn(sender, RGBColors.color6);
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-                MainControl_Load(sender as Form, e);
-            }
+            activebtn(sender, RGBColors.color2);
+            FdoanhThu f=new FdoanhThu();
+            OpenchildForm(f);
             labelcon.Text = "Trang Chủ";
         }
 
         private void btnorders_Click(object sender, EventArgs e)
         {
+            FNhanVien f  = new FNhanVien();
+            OpenchildForm(f);
             activebtn(sender, RGBColors.color1);
            
             labelcon.Text = btnNV.Text;
@@ -132,13 +137,14 @@ namespace DoAn_2
         private void btndashboard_Click(object sender, EventArgs e)
         {
             activebtn(sender, RGBColors.color4);
-          
+            FThemHoaDon f=new FThemHoaDon();
+            OpenchildForm(f);
             labelcon.Text = btnHD.Text;
         }
 
         private void btnnhanvien_Click(object sender, EventArgs e)
         {
-            activebtn(sender, RGBColors.color2);
+            activebtn(sender, RGBColors.color6);
             FThongTinKhachHang f =new FThongTinKhachHang();
             OpenchildForm(f);
             labelcon.Text=btnKH.Text;
@@ -147,8 +153,8 @@ namespace DoAn_2
         private void btnluong_Click(object sender, EventArgs e)
         {
             activebtn(sender, RGBColors.color3);
-       
-          //  OpenchildForm(f);
+        FSanPham f =new FSanPham(); 
+            OpenchildForm(f);
             labelcon.Text = btnSP.Text;
         }
 
@@ -201,10 +207,7 @@ namespace DoAn_2
 
         private void MainControl_Load(object sender, EventArgs e)
         {
-          /*  lblCountNhanVien.Text = dsNhanVien.Count.ToString();
-            lblcountHD.Text = dsHoaDon.Count.ToString();
-            lblCountKhachHang.Text = dsKhachHang.Count.ToString();
-            lblCountSanPham.Text = dsSanPham.Count.ToString();*/
+       
             Flogin f=new Flogin();
             LabelUser.Text = "xin chào: "+TK;
         }
@@ -213,9 +216,7 @@ namespace DoAn_2
         {
             DateTime datetime = DateTime.Now;
             this.lbDateTime.Text = datetime.ToString("dd/MM/yyyy HH:mm:ss");
-            this.labelGioBig.Text = datetime.ToString("HH:mm:ss");
-            this.lbNgayThangBig.Text = datetime.ToString("dd/MM/yyyy");
-            this.lbDateBig.Text = datetime.ToString("dddd");
+            
         }
 
         
@@ -223,7 +224,7 @@ namespace DoAn_2
         private void iconButton1_Click(object sender, EventArgs e)
         {
             activebtn(sender, RGBColors.color5);
-          FdoanhThu f=new FdoanhThu();
+             FThemHDNK f=new FThemHDNK();
             OpenchildForm(f);
             labelcon.Text = ButDT.Text;
         }
@@ -231,6 +232,14 @@ namespace DoAn_2
         private void labelGioBig_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            activebtn(sender, RGBColors.color7);
+            FKhuyenMai f=new FKhuyenMai();
+            OpenchildForm(f);
+            labelcon.Text = ButKhuyenmai.Text;
         }
     }
 }

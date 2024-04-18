@@ -10,6 +10,7 @@ namespace QLTIEMBANLAPTOP
 {
    public class KetNoi
     {
+    
         static string strcnn = "Data Source=.\\SQLEXPRESS;Initial Catalog= CUAHANGLAPTOP;Integrated Security=True";
         SqlConnection con = new SqlConnection(strcnn);
         public SqlConnection getConnection

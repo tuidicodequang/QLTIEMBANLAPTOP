@@ -117,82 +117,99 @@ namespace DashboardApp.Models
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using (var command = new SqlCommand())
+
+                // Tính tổng doanh thu theo ngày
+                using (var revenueCommand = new SqlCommand())
                 {
-                    command.Connection = connection; // Gán kết nối cho đối tượng SqlCommand
-             
-                    command.CommandText = "DoanhThuVaLoiNhuanTheoNgay";
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
-                    command.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
+                    revenueCommand.Connection = connection;
+                    revenueCommand.CommandText = "DoanhThuTheoNgay";
+                    revenueCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    revenueCommand.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
+                    revenueCommand.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
 
-                    var reader = command.ExecuteReader();
-                    var resultTable = new List<KeyValuePair<DateTime, decimal>>();
-                    while (reader.Read())
+                    using (var revenueReader = revenueCommand.ExecuteReader())
                     {
-                        var ngay = (DateTime)reader["Ngay"];
-                        var totalRevenue = (decimal)reader["TotalRevenue"];
-                        var totalProfit = (decimal)reader["TotalProfit"];
+                        while (revenueReader.Read())
+                        {
+                            var ngay = (DateTime)revenueReader["Ngay"];
+                            var totalRevenue = (decimal)revenueReader["TotalRevenue"];
 
-                        resultTable.Add(new KeyValuePair<DateTime, decimal>(ngay, totalRevenue));
+                            TotalRevenue += totalRevenue;
 
-                         
-                        TotalRevenue = totalRevenue;
-                         TotalProfit += totalProfit;
+                            GrossRevenueList.Add(new RevenueByDate
+                            {
+                                Date = ngay.ToString("dd MMM"),
+                                TotalAmount = totalRevenue
+                            });
+                        }
                     }
+                }
 
-                    reader.Close();
-                    // Group by Days
-                    if (numberDays <= 30)
+                // Tính tổng lợi nhuận theo ngày
+                using (var profitCommand = new SqlCommand())
+                {
+                    profitCommand.Connection = connection;
+                    profitCommand.CommandText = "LoiNhuanTheoNgay";
+                    profitCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    profitCommand.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
+                    profitCommand.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
+
+                    using (var profitReader = profitCommand.ExecuteReader())
                     {
-                        GrossRevenueList = (from orderList in resultTable
-                                            select new RevenueByDate
-                                            {
-                                                Date = orderList.Key.ToString("dd MMM"),
-                                                TotalAmount = orderList.Value
-                                            }).ToList();
-                    }
-                    // Group by Weeks
-                    else if (numberDays <= 92)
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
-                                                orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
-                                            into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = "Week " + order.Key.ToString(),
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    // Group by Months
-                    else if (numberDays <= (365 * 2))
-                    {
-                        bool isYear = numberDays <= 365 ? true : false;
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("MMM yyyy")
-                                            into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = isYear ? order.Key.Substring(0, order.Key.IndexOf(" ")) : order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    // Group by Years
-                    else
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("yyyy")
-                                            into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
+                        while (profitReader.Read())
+                        {
+                            var totalProfit = (decimal)profitReader["TotalProfit"];
+                            TotalProfit += totalProfit;
+                        }
                     }
                 }
             }
+
+            // Group kết quả theo yêu cầu
+            if (numberDays <= 30)
+            {
+                // Group by Days
+                GrossRevenueList = GrossRevenueList.GroupBy(x => x.Date)
+                                                     .Select(group => new RevenueByDate
+                                                     {
+                                                         Date = group.Key,
+                                                         TotalAmount = group.Sum(x => x.TotalAmount)
+                                                     }).ToList();
+            }
+            else if (numberDays <= 92)
+            {
+                // Group by Weeks
+                GrossRevenueList = GrossRevenueList.GroupBy(x => CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                                                                     DateTime.ParseExact(x.Date, "dd MMM", CultureInfo.InvariantCulture),
+                                                                     CalendarWeekRule.FirstDay, DayOfWeek.Monday))
+                                                   .Select(group => new RevenueByDate
+                                                   {
+                                                       Date = "Week " + group.Key.ToString(),
+                                                       TotalAmount = group.Sum(x => x.TotalAmount)
+                                                   }).ToList();
+            }
+            else if (numberDays <= (365 * 2))
+            {
+                // Group by Months
+                GrossRevenueList = GrossRevenueList.GroupBy(x => DateTime.ParseExact(x.Date, "dd MMM", CultureInfo.InvariantCulture).ToString("MMM yyyy"))
+                                                   .Select(group => new RevenueByDate
+                                                   {
+                                                       Date = group.Key,
+                                                       TotalAmount = group.Sum(x => x.TotalAmount)
+                                                   }).ToList();
+            }
+            else
+            {
+                // Group by Years
+                GrossRevenueList = GrossRevenueList.GroupBy(x => DateTime.ParseExact(x.Date, "dd MMM", CultureInfo.InvariantCulture).ToString("yyyy"))
+                                                   .Select(group => new RevenueByDate
+                                                   {
+                                                       Date = group.Key,
+                                                       TotalAmount = group.Sum(x => x.TotalAmount)
+                                                   }).ToList();
+            }
         }
+
 
 
         //Public methods

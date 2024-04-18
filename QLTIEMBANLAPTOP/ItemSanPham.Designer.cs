@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTenSP = new System.Windows.Forms.Label();
             this.labelGiaSP = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLTIEMBANLAPTOP.Properties.Resources.gigabyteg5_png;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // labelTenSP
             // 
@@ -61,6 +51,16 @@
             this.labelGiaSP.Size = new System.Drawing.Size(44, 16);
             this.labelGiaSP.TabIndex = 2;
             this.labelGiaSP.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLTIEMBANLAPTOP.Properties.Resources._default;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 138);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ItemSanPham
             // 
