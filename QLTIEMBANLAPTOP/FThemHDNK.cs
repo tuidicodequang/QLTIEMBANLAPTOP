@@ -330,8 +330,19 @@ namespace TiemDien
 
                 if (result == DialogResult.OK)
                 {
-                    // Xóa dòng hiện tại
+                    // Lấy mã sản phẩm từ cột "MaSP" của dòng được chọn
+                    string maSP = dgvSanPham.Rows[e.RowIndex].Cells["MaSP"].Value.ToString();
+
+                    // Xóa dòng hiện tại khỏi DataGridView
                     dgvSanPham.Rows.RemoveAt(e.RowIndex);
+
+                    // Tìm dòng trong DataTable có mã sản phẩm tương tự và xóa nó
+                    DataRow[] rows = dataTable.Select("MaSP = '" + maSP + "'");
+                    foreach (DataRow row in rows)
+                    {
+                        dataTable.Rows.Remove(row);
+                    }
+                    LoadBangSanPhamHoaDon();
                 }
             }
         }

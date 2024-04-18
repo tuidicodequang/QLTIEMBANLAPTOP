@@ -310,8 +310,10 @@ namespace TiemDien
                     {
                         dataTable.Rows.Remove(row);
                     }
+                    LoadBangSanPhamHoaDon();
                 }
             }
+           
         }
         private void dgvHoaDonBanHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
